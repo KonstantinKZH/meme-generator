@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="page/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Memes</title>
+</head>
+
+<body>
+
+    <div class="memes-generation">
+        <div class="settings">
+            <h2 class="settings__title">Настройки:</h2>
+            <div id="input-and-output-meme-names-id" class="input-and-output-meme-names">
+                <p class="input-and-output-meme-names__header">Мем</p>
+                <div class="meme-active">
+                    <p class="js-meme-name-output-field meme-name-output-field">Выберите мем</p>
+                    <img class="js-arrow-open-memes-list arrow-open-memes-list" src="resources/icon/polygon.png" alt="Иконка стрелки вниз">
+                </div>
+                <div id="list-memes-wrapper-id" class="js-list-memes-wrapper list-memes-wrapper">
+                    <ul class="js-list-memes list-memes"></ul>
+                </div>
+            </div>
+            <div class="upper-text">
+                <h2 class="upper-text__header">Текст вверху</h2>
+                <input type="text" class="js-upper-text__input upper-text__input" placeholder="Введите верхний текст">
+            </div>
+            <div class="bottom-text">
+                <h2 class="bottom-text__header">Нижний текст</h2>
+                <input type="text" class="js-bottom-text__input bottom-text__input" placeholder="Введите нижний текст">
+            </div>
+            <button class="js-btn-add-text-preview btn-add-text-preview">Вывести текст</button>
+        </div>
+
+
+
+        <div class="preview">
+            <h2 class="preview__header">Превью:</h2>
+            <div class="preview-image">
+                <img class="js-preview-image__picture preview-image__picture" src="resources/smile.png" alt="Превью">
+                <p class="js-preview-image__upper-text preview-image__upper-text"></p>
+                <p class="js-peview-image__bottom-text preview-image__bottom-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/model.js"></script>
+    <script src="scripts/view.js"></script>
+    <script src="scripts/api.js"></script>
+    <script src="scripts/controller.js"></script>
+    <script src="scripts/index.js"></script>
+
+</body>
+
+</html>
