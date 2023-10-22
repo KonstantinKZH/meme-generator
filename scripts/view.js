@@ -9,7 +9,7 @@ class View {
         this.inputBottomTextNode = document.querySelector(".js-bottom-text__input");
         this.btnAddTextPreviewNode = document.querySelector(".js-btn-add-text-preview");
         this.btnAddTextPreviewNode.addEventListener("click", this._outputUpperAndLowerPreviewTexts);
-        this.picturePreviewNode = document.querySelector(".js-preview-image__picture");
+        this.containerImagesMemes = document.querySelector(".js-preview-image");
         this.upperTextNode = document.querySelector(".js-preview-image__upper-text");
         this.bottomTextNode = document.querySelector(".js-peview-image__bottom-text");
         this.onClickNameMeme = onClickNameMeme;
@@ -59,7 +59,7 @@ class View {
     }
 
     renderPreview(previewUrl){
-        this.picturePreviewNode.src = previewUrl;
+        this.containerImagesMemes.style.backgroundImage = `url('${previewUrl}')`;
     }
 
     _changeStatusMemeList = () => {
